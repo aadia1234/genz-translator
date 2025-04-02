@@ -10,8 +10,8 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def translate():
     sentence = request.get_data().decode("utf-8")
     print("Entering translate function")
-    # translation = translate_sentence(sentence)  
-    translation = "WOW"
+    translation = translate_sentence(sentence)  
+    # translation = "WOW"
     return translation
 
 @app.route('/api/translate', methods=['GET'])
