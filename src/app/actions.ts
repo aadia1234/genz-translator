@@ -2,6 +2,7 @@
 
 export async function translate(sentence: string): Promise<string> {
   try {
+    // comment
     const res = await fetch(`${process.env.BASE_URL!}/api/translate`, {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
