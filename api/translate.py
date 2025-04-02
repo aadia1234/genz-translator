@@ -1,8 +1,4 @@
-from transformers import pipeline, AutoTokenizer,AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq
-from datasets import Dataset
-import pandas as pd
-import numpy as np
-import evaluate
+from transformers import AutoTokenizer,AutoModelForSeq2SeqLM
 
 def translate_sentence(sentence):
     # Add the required prefix - THIS IS CRUCIAL
