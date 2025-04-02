@@ -1,16 +1,13 @@
-from flask import Flask, request, jsonify
-from translate import translate_genz_to_english
+from flask import Flask, request
+from translate import translate_sentence
 app = Flask(__name__)
 
 @app.route('/api/translate', methods=['POST'])
 def translate():
-    body = request.get_json()
+    sentence = request.get_data().decode("utf-8")
     print("Entering translate function")
-    sentence = body["sentence"]
-    translation = translate_genz_to_english(sentence)    
-    
-    response = { "translation": translation }
-    return jsonify(response)
+    translation = translate_sentence(sentence)    
+    return translation
 
 if __name__ == '__main__':
     app.run(port=5328)

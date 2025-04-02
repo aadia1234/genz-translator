@@ -1,11 +1,11 @@
-from translate import translate_genz_to_english
+from translate import translate_sentence
 import unittest
 
 class TestTranslateGenZToEnglish(unittest.TestCase):
     def test_basic_translation(self):
         # Test a simple Gen Z sentence
-        sentence = "Lit fam, no cap."
-        translation = translate_genz_to_english(sentence)
+        sentence = "how art thou of breath when thou hast breath to say to me that thou art of breath"
+        translation = translate_sentence(sentence)
         print_translation(sentence, translation)
         
         

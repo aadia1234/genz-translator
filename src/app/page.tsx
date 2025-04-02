@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="bg-white grid grid-rows-[56px_1fr_56px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
       <main className="w-[50%] gap-[32px] flex flex-col row-start-2 items-center text-gray-600">
-        <p className="text-5xl">Gen Z Translator</p>
+        <p className="text-5xl">Shakespeare Translator</p>
         <div className="flex w-full max-w-2xl items-center space-x-2">
           <Input type="text" placeholder="Enter the sentence you'd like to translate" onChange={(event) => setSentence(event.target.value)} />
           <Button type="submit" onClick={handleTranslate}>Translate</Button>
@@ -37,10 +37,10 @@ export default function Home() {
           <div className="w-full max-w-2xl items-center text-center justify-center space-y-2">
             <p className="text-2xl">{loading ? "Translating..." : "Translated Sentence:"}</p>
             {
-              loading ? 
-                  <LoaderCircle className="mx-auto animate-spin text-gray-600" />
-                  :
-                  <p className="text-xl">{translation}</p>
+              loading ?
+                <LoaderCircle className="mx-auto animate-spin text-gray-600" />
+                :
+                <p className="text-xl">{translation}</p>
             }
           </div>
         }
