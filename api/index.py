@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.route('/api/translate', methods=['POST'])
 def translate():
     body = request.get_json()
+    print("Entering translate function")
     sentence = body["sentence"]
     translation = translate_genz_to_english(sentence)    
     
